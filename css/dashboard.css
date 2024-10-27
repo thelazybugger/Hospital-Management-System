@@ -1,0 +1,97 @@
+/* Basic reset and layout settings */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Dashboard container */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+
+
+
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0B7A9D;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #00C2FF;
+}
+
+/* Stats section */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.stat-card {
+
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 30%;
+    margin-left: 20px;
+        margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.patients{
+    background-color: #74C54B;
+    color: white;
+}
+.doctors{
+    background-color: #8C0896;
+    color: white;
+}
+
+.appointments{
+    background-color: #41B9A5;
+    color:white;
+}
+
+.stat-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Logout button */
+#logout {
+    color: red;
+}

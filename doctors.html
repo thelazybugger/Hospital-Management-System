@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Doctors</title>
+    <link rel="stylesheet" href="css/doctors.css">
+</head>
+
+<body>
+    <div class="doctors-container">
+        <header>
+            
+            <nav>
+            <h1>Manage Doctors</h1>
+
+                <a href="dashboard.html">Dashboard</a>
+                <a href="patient.html">Manage Patients</a>
+                <a href="doctors.html" id="doctors">Manage Doctors</a>
+                <a href="appointments.html">Manage Appointments</a>
+                <a href="billing.html">Billing</a>
+                <a href="index.html" id="logout">Logout</a>
+            </nav>
+        </header>
+
+        <section class="doctor-section">
+            <button id="addDoctorBtn">Add New Doctor</button>
+
+            <!-- Doctor Table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Doctor ID</th>
+                        <th>Doctor Name</th>
+                        <th>Specialization</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="doctorTable">
+                    <!-- Doctors will be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Add/Edit Doctor Modal -->
+        <div id="doctorModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2 id="modalTitle">Add New Doctor</h2>
+                <form id="doctorForm" class="form-vertical">
+                    <div class="form-group">
+                        <label for="doctorID">Doctor ID</label>
+                        <input type="text" id="doctorID" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="doctorName">Doctor Name</label>
+                        <input type="text" id="doctorName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specialization">Specialization</label>
+                        <input type="text" id="specialization" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <button type="submit" id="saveDoctorBtn">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/doctors.js"></script>
+</body>
+
+</html>

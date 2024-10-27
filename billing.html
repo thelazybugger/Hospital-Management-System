@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Section</title>
+    <link rel="stylesheet" href="css/billing.css">
+</head>
+
+<body>
+    
+
+    <div class="billing-container">
+        <section class="billing-section">
+           
+
+            <nav>
+                <h1>Manage Bills</h1>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="managePatients.html">Patients</a>
+                <a href="doctors.html">Doctors</a>
+                <a href="appointments.html">Appointments</a>
+                <a href="billing.html">Billing</a>
+                <a id="logout" href="#">Logout</a>
+            </nav>
+            <div>
+            <button id="addBillBtn">Add New Bill</button>
+            </div>
+
+            <!-- Table to display bills -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bill ID</th>
+                        <th>Patient Name</th>
+                        <th>Date</th>
+                        <th>Total Amount</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="billingTableBody">
+                    <!-- Dynamic content goes here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Modal for adding/editing bills -->
+        <div id="billingModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="closeBillingModal">&times;</span>
+                <h3 id="modalTitle">Add New Bill</h3>
+
+                <form class="form-vertical" id="billingForm">
+                    <div class="form-group">
+                        <label for="patientName">Patient Name</label>
+                        <input type="text" id="patientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="billingDate">Date</label>
+                        <input type="date" id="billingDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="totalAmount">Total Amount</label>
+                        <input type="number" id="totalAmount" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit" id="saveBillBtn">Save Bill</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/billing.js"></script>
+</body>
+
+</html>

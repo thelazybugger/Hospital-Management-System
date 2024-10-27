@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Patients</title>
+    <link rel="stylesheet" href="css/patients.css">
+</head>
+
+<body>
+    <div class="patients-container">
+        <header>
+            <nav>
+                <h1>Manage Patients</h1>
+                    <a href="dashboard.html">Dashboard</a>
+                <a href="patient.html" id="patients">Manage Patients</a>
+                <a href="doctors.html" id="doctors">Manage Doctors</a>
+                <a href="appointments.html" id="appoinments">Manage Appointments</a>
+                <a href="billing.html" id="billing">Billing</a>
+                <a href="index.html" id="logout">Logout</a>
+            </nav>
+        </header>
+
+        <section class="patient-section">
+            <button id="addPatientBtn">Add New Patient</button>
+
+            <!-- Patient Table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Blood Group</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="patientTable">
+                    <!-- Patients will be dynamically added here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Add/Edit Patient Modal -->
+        <div id="patientModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2 id="modalTitle">Add New Patient</h2>
+                <form id="patientForm" class="form-vertical">
+                    <div class="form-group">
+                        <label for="patientID">ID</label>
+                        <input type="text" id="patientID" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="patientName">Name</label>
+                        <input type="text" id="patientName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="patientGender">Gender</label>
+                        <select id="patientGender" required>
+                            <option value="">Select Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="patientBloodGroup">Blood Group</label>
+                        <input type="text" id="patientBloodGroup" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <button type="submit" id="savePatientBtn">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/patients.js"></script>
+</body>
+
+</html>
